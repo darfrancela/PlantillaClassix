@@ -3,38 +3,143 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <title>Plantilla Classix en ASP.Net MVC</title>
+
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/line-icons.css" rel="stylesheet" />
+    <link href="~/Content/css/slicknav.css" rel="stylesheet" />
+    <link href="~/Content/css/animate.css" rel="stylesheet" />
+    <link href="~/Content/css/owl.carousel.css" rel="stylesheet" />
+    <link href="~/Content/css/main.css" rel="stylesheet" />
+    <link href="~/Content/css/responsive.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+    <header id="header-wrap">
+
+        <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar">
+            <div class="container">
+                <div class="theme-header clearfix">
+
+                    <div class="navbar-header">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            <span class="lni-menu"></span>
+                            <span class="lni-menu"></span>
+                            <span class="lni-menu"></span>
+                        </button>
+                        <a href="index.html" class="navbar-brand">
+                            <img src="~/Content/img/logo.png" />
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="main-navbar">
+                        <ul class="navbar-nav mr-auto w-100 justify-content-left">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.html">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="category.html">
+                                    Categories
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Listings <i class="lni-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="adlistinggrid.html">Ad Grid</a></li>
+                                    <li><a class="dropdown-item" href="adlistinglist.html">Ad Listing</a></li>
+                                    <li><a class="dropdown-item" href="ads-details.html">Listing Detail</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Pages <i class="lni-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                                    <li><a class="dropdown-item" href="services.html">Services</a></li>
+                                    <li><a class="dropdown-item" href="ads-details.html">Ads Details</a></li>
+                                    <li><a class="dropdown-item" href="post-ads.html">Ads Post</a></li>
+                                    <li><a class="dropdown-item" href="pricing.html">Packages</a></li>
+                                    <li><a class="dropdown-item" href="testimonial.html">Testimonial</a></li>
+                                    <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                                    <li><a class="dropdown-item" href="404.html">404</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Blog <i class="lni-chevron-down"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="blog.html">Blog - Right Sidebar</a></li>
+                                    <li><a class="dropdown-item" href="blog-left-sidebar.html">Blog - Left Sidebar</a></li>
+                                    <li><a class="dropdown-item" href="blog-grid-full-width.html"> Blog full width </a></li>
+                                    <li><a class="dropdown-item" href="single-post.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="header-top-right float-right">
+                            <a href="login.html" class="header-top-button"><i class="lni-lock"></i> Log In</a> |
+                            <a href="register.html" class="header-top-button"><i class="lni-pencil"></i> Register</a>
+                        </div>
+                        <div class="post-btn">
+                            <a class="btn btn-common" href="post-ads.html"><i class="lni-pencil-alt"></i> Post an Ad</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                </ul>
+            <div class="mobile-menu" data-logo="/Content/img/logo-mobile.png"></div>
+        </nav>
+
+    </header>
+
+    @RenderBody()
+    
+    <footer>
+        <div id="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="site-info text-center">
+                            <p>Designed and Developed by Darshin</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+    </footer>
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <a href="#" class="back-to-top">
+        <i class="lni-chevron-up"></i>
+    </a>
+
+    <script src="~/Content/js/jquery-min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/js/wow.js"></script>
+    <script src="~/Content/js/owl.carousel.min.js"></script>
+    <script src="~/Content/js/jquery.slicknav.js"></script>
+    <script src="~/Content/js/main.js"></script>
+
+    @*<script src="assets/js/popper.min.js"></script>*@
+    @*<script src="assets/js/bootstrap.min.js"></script>*@
+    @*<script src="assets/js/jquery.counterup.min.js"></script>*@
+    @*<script src="assets/js/waypoints.min.js"></script>*@
+    @*<script src="assets/js/wow.js"></script>*@
+    @*<script src="assets/js/owl.carousel.min.js"></script>*@
+    @*<script src="assets/js/jquery.slicknav.js"></script>*@
+    @*<script src="assets/js/main.js"></script>*@
+    @*<script src="assets/js/summernote.js"></script>*@
 </body>
+
 </html>
